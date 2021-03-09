@@ -5,6 +5,10 @@ public class EmployeeDTO {
     private String name;
     private Double salary;
 
+    public EmployeeDTO(){
+        
+    }
+
     public EmployeeDTO(Long id, String name, Double salary) {
         this.id = id;
         this.name = name;

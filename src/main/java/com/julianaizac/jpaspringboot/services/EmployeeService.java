@@ -18,7 +18,7 @@ public class EmployeeService {
 
     public List<EmployeeDTO> getEmployees() {
         
-        List<Employee> employeeList = employeeRepository.getEmployees();
+        List<Employee> employeeList = employeeRepository.findAll();
         List<EmployeeDTO> employeeListDTO = new ArrayList<>();
 
         for (Employee e : employeeList) {
