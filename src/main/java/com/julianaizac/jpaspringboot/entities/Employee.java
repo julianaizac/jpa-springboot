@@ -8,6 +8,8 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+import com.julianaizac.jpaspringboot.DTO.EmployeeInsertDTO;
+
 
 @Entity
 @Table(name = "TB_EMPLOYEE")
@@ -25,6 +27,12 @@ public class Employee implements Serializable {
 
     public Employee(){
 
+    }
+
+    public Employee(EmployeeInsertDTO dto) {
+        this.name = dto.getName();
+        this.address = dto.getAddress();
+        this.salary = dto.getSalary();
     }
 
     public Long getId() {

@@ -1,5 +1,7 @@
 package com.julianaizac.jpaspringboot.DTO;
 
+import com.julianaizac.jpaspringboot.entities.Employee;
+
 public class EmployeeDTO {
     private Long id;
     private String name;
@@ -13,6 +15,12 @@ public class EmployeeDTO {
         this.id = id;
         this.name = name;
         this.salary = salary;
+    }
+
+    public EmployeeDTO(Employee employee) {
+        this.id = employee.getId();
+        this.name = employee.getName();
+        this.salary = employee.getSalary();
     }
 
     public Long getId() {
